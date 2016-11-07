@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  //- p= data
+  article.cf.ph3.ph5-ns.pv5
+    header.fn.fl-ns.w-50-ns.pr4-ns
+      h1.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2= data.title
+      h2.f3.mid-gray.lh-title= data.description
+      time.f6.ttu.tracked.gray= data.date
+      ul.list.pv4
+        each val in data.links
+          li.dib.mr2
+            a.f6.f5-ns.b.db.pa2.link.dim.mid-gray(href=val.href) #{val.text}
+    .fn.fl-ns.w-50-ns
+      p.f5.lh-copy.measure.mt0-ns #{data.text}
+
+  //- .container
+  //-   .row
+  //-     .col-sm-4
+  //-       .card.card-body
+  //-         h3= data.publisher
+  //-     .col-sm-8
+  //-       h1= data.title
+  //-       p #{data.text}
